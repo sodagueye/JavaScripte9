@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. soit deux tableaux (tab1 et tab2) de nombre positif et negatif saisis par l'utilisateur :
+Écrire un programme permettant de recopier dans tab3 tous les éléments positifs de tab1, et remplacer les éléments de tab2  par des zéros sans utiliser une boucle,
+ et afficher les resultats dans le DOM -->
+ <!-- <input type="number" id="number">
+ <button onclick="resulta()"></button>
+ <p id="resultat"></p> -->
+ 
+ <p id="resultat"></p>
+ <p id="result"></p>
+
+ 
+ 
+
+ <script>
+    // Saisir les element
+    var tab1 =  prompt("saisir les nombre du tab1 ").split(',');
+    var tab2 =  prompt("saisir les nombre  positif et negatif du tab2 ").split(',');
+    // copier les element positif de tab1 dans tab3
+    var tab3 = tab1.filter(tab1 =>{
+      return tab1 > 0;
+     } );
+     document.getElementById("resultat").innerHTML = tab3;
+    // Remplacer les element de tab2 par zoro
+    tab2.forEach((element , index ) =>{
+     if (element < 0){
+       tab2[index] = 0
+            
+       };
+        } );
+        // affichage dans le Dom
+      document.getElementById("result").innerHTML = tab2 ;   
+        
+   
+    
+       
+       
+       
+ </script>
+ 
+    
+</body>
+</html>
